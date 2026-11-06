@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <div class="logo">✦</div>
+        <div>
+            <h1>StudyConnect</h1>
+            <p>Conectando ideias e conhecimentos</p>
+        </div>
+    </header>
+
+    <nav>
+        <button class="active" onclick="mostrarTela('inicio', this)">Início</button>
+        <button onclick="mostrarTela('criar', this)">Criar grupo</button>
+        <button onclick="mostrarTela('receita', this)">Sustentabilidade</button>
+    </nav>
+
+    <main>
+
+        <!-- TELA INICIAL -->
+        <section id="inicio" class="tela ativa">
+            <h2>Olá, estudante! 👋</h2>
+            <p>Encontre pessoas para aprender junto.</p>
+
+            <div class="card destaque">
+                <h3>📚 Seus grupos de estudo</h3>
+                <p>Organize seus estudos e compartilhe conhecimentos.</p>
+            </div>
+
+            <div class="card">
+                <h3>💻 Matemática</h3>
+                <p>Monitor: Gabriel</p>
+                <p>Horário: Segunda-feira, 14h</p>
+                <span class="tag">8 participantes</span>
+            </div>
+
+            <div class="card">
+                <h3>🧪 Química</h3>
+                <p>Monitor: Ana</p>
+                <p>Horário: Quarta-feira, 15h</p>
+                <span class="tag">5 participantes</span>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Programação</h3>
+                <p>Monitor: Lucas</p>
+                <p>Horário: Sexta-feira, 13h</p>
+                <span class="tag">6 participantes</span>
+            </div>
+        </section>
+
+        <!-- TELA CRIAR GRUPO -->
+        <section id="criar" class="tela">
+            <h2>✨ Criar grupo</h2>
+            <p>Informe a disciplina e nossa IA dará sugestões.</p>
+
+            <div class="card">
+                <label for="disciplina">Nome da disciplina:</label>
+                <input id="disciplina" type="text"
+                    placeholder="Ex: Matemática">
+
+                <label for="assunto">Assunto que deseja estudar:</label>
+                <input id="assunto" type="text"
+                    placeholder="Ex: Equações">
+
+                <button class="principal" onclick="gerarSugestao()">
+                    🤖 Consultar assistente IA
+                </button>
+
+                <div id="resultado" class="resultado">
+                    <p>As sugestões aparecerão aqui.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TELA SUSTENTABILIDADE -->
+        <section id="receita" class="tela">
+            <h2>💰 Sustentabilidade</h2>
+            <p>Como o StudyConnect se mantém funcionando.</p>
+
+            <div class="card destaque">
+                <h3>Modelo Freemium + B2B</h3>
+                <p>Os estudantes utilizam gratuitamente as funções
+                principais. Instituições e patrocinadores ajudam
+                a financiar o projeto.</p>
+            </div>
+
+            <div class="card">
+                <h3>📈 Fontes de receita</h3>
+                <p>Parcerias com escolas: R$ 500/mês</p>
+                <p>Patrocínios: R$ 300/mês</p>
+                <p>Recursos premium institucionais: R$ 200/mês</p>
+            </div>
+
+            <div class="card">
+                <h3>📉 Custos operacionais</h3>
+                <p>Hospedagem: R$ 150/mês</p>
+                <p>Manutenção: R$ 250/mês</p>
+                <p>APIs e serviços: R$ 100/mês</p>
+            </div>
+
+            <div class="card saldo">
+                <h3>Resultado mensal simulado</h3>
+                <h2 id="saldo">R$ 500,00</h2>
+                <p>Receitas estimadas menos custos estimados.</p>
+            </div>
+
+        </section>s
+
+    </main>
+
+    <footer>
+        <p>StudyConnect © 2026</p>
+        <small>Estudar junto é crescer junto! 🚀</small>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

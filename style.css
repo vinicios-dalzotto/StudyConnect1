@@ -1,0 +1,226 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e9eaff;
+    color: #25254a;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.app {
+    width: 100%;
+    max-width: 400px;
+    min-height: 90vh;
+    background: #f8f8ff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px #7775;
+}
+
+header {
+    background: linear-gradient(135deg, #2855e8, #873de5);
+    color: white;
+    padding: 25px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    background: white;
+    color: #713ee8;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 23px;
+}
+
+header p {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    background: white;
+    padding: 8px 4px;
+    gap: 4px;
+}
+
+nav button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 3px;
+    border-radius: 10px;
+    font-size: 11px;
+    color: #555;
+    cursor: pointer;
+}
+
+nav button.active {
+    background: #e8e5ff;
+    color: #6439d8;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px 16px;
+    min-height: 480px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+main > section > p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 17px;
+    margin-bottom: 13px;
+    box-shadow: 0 3px 12px #3331;
+}
+
+.card h3 {
+    color: #4933aa;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.destaque {
+    background: linear-gradient(135deg, #e6e8ff, #f1e4ff);
+    border-left: 4px solid #7046e8;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #e9e5ff;
+    color: #5937c4;
+    font-size: 11px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d7d5eb;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #7545e8;
+}
+
+button.principal {
+    width: 100%;
+    border: none;
+    background: linear-gradient(135deg, #2855e8, #873de5);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resultado {
+    background: #f0efff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #4933aa;
+}
+
+.saldo {
+    background: linear-gradient(135deg, #2855e8, #873de5);
+    color: white;
+}
+
+.saldo h3,
+.saldo h2,
+.saldo p {
+    color: white;
+}
+
+.saldo h2 {
+    font-size: 27px;
+    margin-top: 12px;
+}
+
+footer {
+    text-align: center;
+    background: #eeeaff;
+    padding: 18px;
+    color: #6653a8;
+    font-size: 12px;
+}
+
+footer small {
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav button {
+        font-size: 10px;
+    }
+}
